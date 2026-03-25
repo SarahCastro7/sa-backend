@@ -1,12 +1,11 @@
 //onde fica o mock de dados
 
 const pet = [
-    { id: 1, nome: 'winnnow', type: 'coelho' },
-    { id: 2, nome: 'skay', type: 'cadela' },
-    { id: 3, nome: 'tunico', type: 'gato' },
-    { id: 4, nome: 'maya', type: 'gata' },
-    { id: 5, nome: 'zili', type: 'cadela' },
-
+    { id: 1, nome: 'winnnow', type: 'coelho', age: 2 },
+    { id: 2, nome: 'skay', type: 'cadela', age: 7 },
+    { id: 3, nome: 'tunico', type: 'gato', age: 2 },
+    { id: 4, nome: 'maya', type: 'gata', age: 1 },
+    { id: 5, nome: 'zili', type: 'cadela', age: 6 }
 ]
 
 class Pet {
