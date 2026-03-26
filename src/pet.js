@@ -1,5 +1,3 @@
-//mock de dados de pets 
-
 import express from 'express';
 import petRoutes from './routes/petRoutes.js';
 
@@ -12,10 +10,10 @@ app.get("/", (req, res) => {
     res.send('uhhhhul')
 });
 
-app.use('/pets', petRoutes)
+app.use('/pets', petRoutes);
 
 app.listen(PORT, () => {
-    console.log(`ta rodando em http://localhost:${PORT}`)
+    console.log(`ta rodando em http://localhost:${PORT}`);
 });
 
 // BD > Services > Routes > pet.js

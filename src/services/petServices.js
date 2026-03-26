@@ -12,6 +12,10 @@ class Pet {
     getALL() {
         return pet;
     }
+
+    getById(id){
+        return pet.find((pet) => pet.id === id);
+    }
 }
 
 export default new Pet();
