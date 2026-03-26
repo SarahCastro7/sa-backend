@@ -1,5 +1,5 @@
 import express from 'express';
-import petService from './services/petServices.js';
+import petServices from '../services/petServices.js';
 
 const router = express.Router();
 

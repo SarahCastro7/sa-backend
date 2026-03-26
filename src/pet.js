@@ -3,19 +3,19 @@
 import express from 'express';
 import petRoutes from './routes/petRoutes.js';
 
-const app = express();
-const PORT = 3000;
+const app = express()
+const PORT= 3000
 
-app.use(express.json());
+app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.send('uhhhhul');
+app.get("/", (req, res) => {
+    res.send('uhhhhul')
 });
 
-app.use('/pets', petRoutes);
+app.use('/pets', petRoutes)
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`ta rodando em http://localhost:${PORT}`)
 });
 
-//BD > Services > Routes > pet.js
+// BD > Services > Routes > pet.js
