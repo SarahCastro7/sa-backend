@@ -1,4 +1,4 @@
-//onde fica o mock de dados
+//onde fica o mock de dados dos pets!
 
 const pet = [
     { id: 1, nome: 'winnnow', type: 'coelho', age: 2},
