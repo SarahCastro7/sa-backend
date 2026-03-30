@@ -29,4 +29,19 @@ router.get('/:id', (req, res) => {
     }
 });
 
+router.post('/', (req, res) => {
+    const { name } = req.body;
+
+    if (!name) {
+        return res.status(400).json({ message: 'o nome do pet é necessário' });
+    }
+
+    try {
+        const newPet = petServices.create(name);
+        res.status(201).json(newPet);
+    } catch (err) {
+        res.status(500).json({ error: 'erro ao criar o pet' });
+    }
+});
+
 export default router;

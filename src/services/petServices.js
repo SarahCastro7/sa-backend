@@ -17,6 +17,13 @@ class Pet {
     getById(id){
         return pet.find((pet) => pet.id === id);
     }
+
+    create(name) {
+        const newPet = pet.length > 0 ? pet[pet.length - 1].id + 1 : pet.id
+        + 1
+        
+
+    }
 }
 
 export default new Pet();
