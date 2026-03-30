@@ -13,6 +13,7 @@ class Pet {
         return pet;
     }
 
+    //adicionei o getById para pegar um pet específico, por exemplo, para mostrar os detalhes do pet - 26/03 e 30/03
     getById(id){
         return pet.find((pet) => pet.id === id);
     }
