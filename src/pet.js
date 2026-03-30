@@ -7,7 +7,7 @@ const PORT= 3000
 app.use(express.json())
 
 app.get("/", (req, res) => {
-    res.send('uhhhhul')
+    res.send(`the life is not a strawberry!🍓✨`)
 });
 
 app.use('/pets', petRoutes);
