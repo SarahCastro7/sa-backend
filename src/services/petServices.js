@@ -1,6 +1,6 @@
 //onde fica o mock de dados dos pets!
 
-const pet = [
+const pets = [
     { id: 1, nome: 'winnnow', type: 'coelho', age: 2},
     { id: 2, nome: 'skay', type: 'cadela', age: 7},
     { id: 3, nome: 'tunico', type: 'gato', age: 2},
@@ -10,19 +10,33 @@ const pet = [
 
 class Pet {
     getALL() {
-        return pet;
+        return pets;
     }
 
     //adicionei o getById para pegar um pet específico, por exemplo, para mostrar os detalhes do pet - 26/03 e 30/03
     getById(id){
-        return pet.find((pet) => pet.id === id);
+        return pets.find((pet) => pet.id === id);
     }
 
-    create(name) {
-        const newPet = pet.length > 0 ? pet[pet.length - 1].id + 1 : pet.id
-        + 1
-        
+    create(nome, type, age) {
+        const newPet = {
+            id: pets.length > 0 ? pets[pets.length - 1].id + 1 : 1,
+            nome
+        }
 
+        pets.push(newPet)
+
+        return newPet
+    }
+
+    updatePatch (id, nome) {
+        const index = pets.findIndex((p) => p.id === parseInt(id));
+
+        if (index === -1) return null;
+
+        if (nome) {
+            pets[index].nome = nome;
+        }
     }
 }
 
